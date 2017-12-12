@@ -15,8 +15,8 @@ class Register extends Database
                $lname, $fname, $uid, $email, $hashed_pwd
             ]
          );
-
-      } catch ( PDOException $e )
+      }
+      catch ( PDOException $e )
       {
          die( "Something went wrong. STOP CYBER CRIME". $e->getMessage() );
          exit;
@@ -33,8 +33,8 @@ class Register extends Database
                $uid
             ]
          );
-
-      } catch ( PDOException $e )
+      }
+      catch ( PDOException $e )
       {
          die( "Something went wrong. STOP CYBER CRIME". $e->getMessage() );
          exit;
@@ -51,8 +51,8 @@ class Register extends Database
                $email
             ]
          );
-
-      } catch ( PDOException $e )
+      }
+      catch ( PDOException $e )
       {
          die( "Something went wrong. STOP CYBER CRIME". $e->getMessage() );
          exit;

@@ -19,8 +19,8 @@ class Database
          $pdo->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ );
          $pdo->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
          return $pdo;
-
-      } catch ( PDOException $e )
+      }
+      catch ( PDOException $e )
       {
          die ( "Connection Error: ". $e->getMessage() );
       }
@@ -35,8 +35,8 @@ class Database
             $stmt->execute($params);
             return $stmt;
          }
-
-      } catch (PDOException $e)
+      }
+      catch (PDOException $e)
       {
          die( "Something went wrong. ". $e->getMessage() );
       }

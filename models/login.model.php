@@ -14,8 +14,8 @@ class Login extends Database
                $email
             ]
          );
-
-      } catch ( PDOException $e )
+      }
+      catch ( PDOException $e )
       {
          die("Connection error: ". $e->getMessage() );
          exit;

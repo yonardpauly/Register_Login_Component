@@ -23,13 +23,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
    if ( empty($email) && empty($pwd) )
    {
       $general_err = "<div class='alert alert-danger text-center'>Please fill up all fields.</div>";
-
-   } elseif ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) )
+   }
+   elseif ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) )
    {
       $general_err = "<div class='alert alert-danger text-center'>Invalid Email format! Please try again.</div>";
       $email = '';
 
-   } else
+   }
+   else
    {
       if ( empty($general_err) )
       {
@@ -57,7 +58,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                      header( 'location: ../views/home.php' );
                      exit;
 
-                  } else
+                  }
+                  else
                   {
                      // If pwd does not verified and does not matched to what the user was typed,
                      // an error will show
@@ -70,7 +72,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                   die ( "Error processing request. ". $e->getMessage() );
                }
 
-            } else
+            }
+            else
             {
                // If the user tries to login a non-existing email in DB,
                // an error will show
