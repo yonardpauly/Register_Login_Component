@@ -17,7 +17,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-6 col-md-offset-3">
-               <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
+               <form action="<?php validate( $_SERVER["PHP_SELF"] ); ?>" method="POST">
                   <div class="panel panel-default">
                      <div class="panel-heading">
                         <h2 class="text-center">Create an Account</h2>
